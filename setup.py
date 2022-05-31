@@ -22,6 +22,9 @@ VERSION = "0.0.1"
 
 INSTALL_REQUIRES = [
     "bech32==1.2.0",
+    "bip-utils==2.3.0",
+    "ed25519==1.5",
+    "mnemonic==0.20",
 ]
 
 # For local development, tests
