@@ -47,8 +47,4 @@ repos:
     rev: 1.6.2
     hooks:
       - id: bandit
-        exclude: |
-          (?x)^(
-              tests/|
-              setup.py
-          )$
+        exclude: ^(tests/|setup.py|znn/wallet/keystore.py)
