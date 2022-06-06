@@ -23,7 +23,7 @@ Use [pyenv-installer](https://github.com/pyenv/pyenv-installer) for easy install
 
 - Install dev requirements
 
-- `pip install -e ".[dev]"`
+  - `pip install -e ".[dev]"`
 
 - Install precommit hook
 
