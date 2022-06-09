@@ -56,3 +56,6 @@ class Address:
         hrp, bcore = bech32.bech32_decode(address)
         core = bech32.convertbits(bcore, 5, 8, False)
         return Address(hrp, core)
+
+
+EMPTY_ADDRESS = Address.parse("z1qqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqsggv2f")

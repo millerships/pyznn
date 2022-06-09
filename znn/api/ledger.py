@@ -1,7 +1,6 @@
 from znn.client.websocket import get_default_client
-
-MEMORY_POOL_PAGE_SIZE = 50
-RPC_MAX_PAGE_SIZE = 1024
+from znn.constants import MEMORY_POOL_PAGE_SIZE
+from znn.constants import RPC_MAX_PAGE_SIZE
 
 
 class LedgerApi:
