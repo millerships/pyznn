@@ -14,5 +14,8 @@ class HashHeight:
     def from_json(json_data):
         return HashHeight(Hash.parse(json_data["hash"]), json_data["height"])
 
+    def to_json(self):
+        return {"hash": str(self.hash), "height": self.height}
+
 
 EMPTY_HASH_HEIGHT = HashHeight(EMPTY_HASH, 0)
