@@ -80,6 +80,16 @@ class AccountBlock:
             "signature": base64.b64encode(self.signature).decode(),
         }
 
+    @staticmethod
+    def contract_call(contract_address, zts, amount: int, data):
+        ab = AccountBlock()
+        ab.block_type = 2
+        ab.to_address = contract_address
+        ab.token_standard = zts
+        ab.amount = amount
+        ab.data = data
+        return ab
+
     def get_hash(self):
         return Hash.digest(
             b"".join(
