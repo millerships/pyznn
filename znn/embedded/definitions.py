@@ -1,3 +1,6 @@
+from znn.abi import ABI
+
+
 PLASMA_DEFINITION = """[
 {"type":"function","name":"Fuse","inputs":[{"name":"address","type":"address"}]},
 {"type":"function","name":"CancelFuse","inputs":[{"name":"id","type":"hash"}]}
@@ -53,3 +56,12 @@ COMMON_DEFINITION = """[
 {"type":"function","name":"WithdrawQsr","inputs":[]},
 {"type":"function","name":"CollectReward","inputs":[]}
 ]"""
+
+PASMA_ABI = ABI.from_json(PLASMA_DEFINITION)
+PILLAS_ABI = ABI.from_json(PILLAR_DEFINITION)
+TOKEN_ABI = ABI.from_json(TOKEN_DEFINITION)
+SENTINEL_ABI = ABI.from_json(SENTINEL_DEFINITION)
+SWAP_ABI = ABI.from_json(SWAP_DEFINITION)
+STAKE_ABI = ABI.from_json(STAKE_DEFINITION)
+ACCELERATOR_ABI = ABI.from_json(ACCELERATOR_DEFINITION)
+COMMON_ABI = ABI.from_json(COMMON_DEFINITION)
