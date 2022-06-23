@@ -35,6 +35,14 @@ class TokenStandard:
         core = bech32.convertbits(bcore, 5, 8, False)
         return TokenStandard(hrp, core)
 
+    @staticmethod
+    def from_hex(ts_hex: str):
+        return TokenStandard(HRP, bytes.fromhex(ts_hex))
+
+    @property
+    def core_to_hex(self):
+        return f"0x{bytes(self.core).hex()}"
+
 
 EMPTY_ZTS = TokenStandard.parse("zts1qqqqqqqqqqqqqqqqtq587y")
 ZNN_ZTS = TokenStandard.parse("zts1znnxxxxxxxxxxxxx9z4ulx")

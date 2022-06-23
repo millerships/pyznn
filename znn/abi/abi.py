@@ -32,7 +32,7 @@ class ABI:
             return str(Address.from_hex(value))
         if param_type == "tokenStandard":
             return str(TokenStandard.from_hex(value))
-        return f"0x{value}"
+        return value
 
     def encode(self, fn_name: str, fn_params: List):
         if fn_name not in self.fn_name_map:

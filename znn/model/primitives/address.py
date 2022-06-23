@@ -57,6 +57,14 @@ class Address:
         core = bech32.convertbits(bcore, 5, 8, False)
         return Address(hrp, core)
 
+    @staticmethod
+    def from_hex(address_hex: str):
+        return Address(HRP, bytes.fromhex(address_hex))
+
+    @property
+    def core_to_hex(self):
+        return f"0x{bytes(self.core).hex()}"
+
 
 EMPTY_ADDRESS = Address.parse("z1qqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqsggv2f")
 PLASMA_ADDRESS = Address.parse("z1qxemdeddedxplasmaxxxxxxxxxxxxxxxxsctrp")

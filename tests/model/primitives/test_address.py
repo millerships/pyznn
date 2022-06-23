@@ -24,6 +24,7 @@ class TestAddress:
         136,
         77,
     ]
+    core_hex = "0x0025374a419f32736f61ecc5ac4059d2f1b5884d"
     address = "z1qqjnwjjpnue8xmmpanz6csze6tcmtzzdtfsww7"
     public_key_hex = "3e13d7238d0e768a567dce84b54915f2323f2dcd0ef9a716d9c61abed631ba10"
 
@@ -32,9 +33,11 @@ class TestAddress:
         assert str(a) == self.address
         assert a.hrp == "z"
         assert a.core == self.core
+        assert a.core_to_hex == self.core_hex
 
     def test_parse(self):
         a = Address.parse(self.address)
         assert str(a) == self.address
         assert a.hrp == "z"
         assert a.core == self.core
+        assert a.core_to_hex == self.core_hex
