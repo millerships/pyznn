@@ -1,4 +1,4 @@
-from znn.embedded.definitions import PILLAS_ABI
+from znn.embedded.definitions import PILLAR_ABI
 from znn.embedded.definitions import STAKE_ABI
 from znn.embedded.definitions import TOKEN_ABI
 from znn.model.primitives.token_standard import ZNN_ZTS
@@ -71,7 +71,7 @@ class TestABI:
             "giveBlockRewardPercentage": 50,
             "giveDelegateRewardPercentage": 75,
         }
-        encoded_bytes = PILLAS_ABI.encode(
+        encoded_bytes = PILLAR_ABI.encode(
             "Register",
             [
                 data["name"],
@@ -84,5 +84,5 @@ class TestABI:
         expected_encoded_hex = "644de92700000000000000000000000000000000000000000000000000000000000000a000000000000000000000000000697de1ade99a71f677e2a93acc9849c056411a00000000000000000000000000697de1ade99a71f677e2a93acc9849c056411a0000000000000000000000000000000000000000000000000000000000000032000000000000000000000000000000000000000000000000000000000000004b000000000000000000000000000000000000000000000000000000000000002c5265616c6c79206c6f6e672074657874207768696368206973206d6f7265207468616e2033322062797465730000000000000000000000000000000000000000"  # noqa
         assert expected_encoded_hex == encoded_bytes.hex()
 
-        decoded = PILLAS_ABI.decode("Register", encoded_bytes)
+        decoded = PILLAR_ABI.decode("Register", encoded_bytes)
         assert decoded == data
