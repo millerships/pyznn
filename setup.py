@@ -24,6 +24,8 @@ INSTALL_REQUIRES = [
     "bech32==1.2.0",
     "bip-utils==2.3.0",
     "ed25519==1.5",
+    "eth-abi==2.1.1",
+    "eth-utils==1.10.0",
     "jsonrpcclient==4.0.2",
     "mnemonic==0.20",
     "websockets==10.3",
