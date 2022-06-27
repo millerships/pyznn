@@ -48,3 +48,9 @@ Before making changes, let's ensure tests run successfully on local.
 - Ensure that tests are covered
 - Update the documentation website (markdown)
 - Open a PR for review by core-team
+
+## Deploying documentation
+
+```bash
+USE_SSH=true GITHUB_HOST=github.com-roymiller yarn deploy
+```

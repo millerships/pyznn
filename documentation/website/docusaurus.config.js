@@ -8,8 +8,8 @@ const darkCodeTheme = require("prism-react-renderer/themes/dracula");
 const config = {
   title: "PyZNN Docs",
   tagline: "Python SDK for interacting with the Zenon network and ecosystem.",
-  url: "https://your-docusaurus-test-site.com",
-  baseUrl: "/",
+  url: "https://millerships.github.io",
+  baseUrl: "/pyznn/",
   onBrokenLinks: "throw",
   onBrokenMarkdownLinks: "warn",
   favicon: "img/favicon.ico",
