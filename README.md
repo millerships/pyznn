@@ -25,7 +25,7 @@ pip install pyznn
 
 ## Contributing
 
-Head over to <a href="https://millerships.github.io/pyznn/" target="_blank">docs</a>.
+Head over to <a href="https://millerships.github.io/pyznn/docs/contributing" target="_blank">Contributing docs</a>.
 
 ## Sponsors
 
