@@ -5,14 +5,14 @@ import styles from "./styles.module.css";
 const FeatureList = [
   {
     title: "Quick start",
-    Svg: require("@site/static/img/undraw_docusaurus_mountain.svg").default,
+    Svg: require("@site/static/img/1_quickstart.svg").default,
     description: (
       <>Get started quickly to play with the Zenon Ecosystem and APIs.</>
     ),
   },
   {
     title: "Wallet",
-    Svg: require("@site/static/img/undraw_docusaurus_tree.svg").default,
+    Svg: require("@site/static/img/2_wallet.svg").default,
     description: (
       <>
         Comes with Wallet utilities so you can start building on top of it right
@@ -22,7 +22,7 @@ const FeatureList = [
   },
   {
     title: "Examples",
-    Svg: require("@site/static/img/undraw_docusaurus_react.svg").default,
+    Svg: require("@site/static/img/3_examples.svg").default,
     description: (
       <>
         Examples for JSON-RPC client, Wallet, Embedded APIs and other usecases.
