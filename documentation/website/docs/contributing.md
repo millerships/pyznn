@@ -54,3 +54,14 @@ Before making changes, let's ensure tests run successfully on local.
 ```bash
 USE_SSH=true GITHUB_HOST=github.com-roymiller yarn deploy
 ```
+
+## Publishing to Pypi
+
+- Install `pip install twine`
+- Bump the version constant `VERSION` in `setup.py`
+- Commit the version bump change in setup.py (It is okay to not push, but commit is required)
+- Run setup test
+  - `python setup.py test`
+- Publish package to PyPI
+  - `python setup.py upload`
+- Enter PyPi credentials (note: you must be added to the project as a maintainer)

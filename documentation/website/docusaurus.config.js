@@ -63,7 +63,7 @@ const config = {
             label: "Documentation",
           },
           {
-            href: "https://github.com/facebook/docusaurus",
+            href: "https://github.com/millerships/pyznn",
             label: "GitHub",
             position: "right",
           },
