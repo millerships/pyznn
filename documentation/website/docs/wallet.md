@@ -45,7 +45,7 @@ print(str(keypair.address))
 
 ## Signing and verifying a message
 
-```
+```python
 from znn.wallet.keypair import KeyPair
 from znn.wallet.keypair import verify_signature
 
@@ -63,7 +63,7 @@ Wallet module comes with a `Transact` class that helps with sending/publishing a
 
 Here's an example.
 
-```
+```python
 from znn.wallet.transact import Transact
 from znn.model.primitives.address import Address
 from znn.model.primitives.token_standard import ZNN_ZTS
