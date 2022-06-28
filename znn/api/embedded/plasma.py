@@ -1,3 +1,5 @@
+import base64
+
 from znn.client.websocket import get_default_client
 from znn.constants import RPC_MAX_PAGE_SIZE
 from znn.embedded.definitions import PLASMA_ABI
@@ -33,6 +35,21 @@ class PlasmaApi:
     async def get_required_fusion_amount(self, required_plasma: int):
         return await self.ws_client.send_request(
             "embedded.plasma.getRequiredFusionAmount", [required_plasma]
+        )
+
+    async def get_internal_required_pow_for_account_block(
+        self, account_block: AccountBlock
+    ):
+        return await self.ws_client.send_request(
+            "embedded.plasma.getRequiredPoWForAccountBlock",
+            [
+                {
+                    "blockType": account_block.block_type,
+                    "address": str(account_block.address),
+                    "toAddress": str(account_block.to_address),
+                    "data": base64.b64encode(account_block.data).decode(),
+                }
+            ],
         )
 
     async def get_required_pow_for_account_block(self, pow_param):

@@ -56,3 +56,21 @@ verify_signature(keypair.public_key, signed_msg.decode(), "Hello, aliens")
 ```
 
 Verification throws `BadSignatureError` if it fails.
+
+## Send transaction
+
+Wallet module comes with a `Transact` class that helps with sending/publishing a transaction.
+
+Here's an example.
+
+```
+from znn.wallet.transact import Transact
+from znn.model.primitives.address import Address
+from znn.model.primitives.token_standard import ZNN_ZTS
+
+# Transact's init method expects the private_key of the account you want to use for signing
+tx = Transact("d6b01f96b566d7df9b5b53b1971e4baeb74cc64167a9843f82d04b2194ca4863")
+
+to_address = Address.parse("z1qzpcwr6lk0zhejzpt04j2jcqqadtu046ffr8nr")
+await tx.send(to, ZNN_ZTS, 100000000)
+```

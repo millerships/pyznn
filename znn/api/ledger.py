@@ -1,6 +1,7 @@
 from znn.client.websocket import get_default_client
 from znn.constants import MEMORY_POOL_PAGE_SIZE
 from znn.constants import RPC_MAX_PAGE_SIZE
+from znn.model.nom.account_block import AccountBlock
 
 
 class LedgerApi:
@@ -10,9 +11,10 @@ class LedgerApi:
         if self.ws_client is None:
             self.ws_client = get_default_client()
 
-    async def publish_raw_transaction(self, hashstr: str):
-        # TODO
-        pass
+    async def publish_raw_transaction(self, account_block: AccountBlock):
+        return await self.ws_client.send_request(
+            "ledger.publishRawTransaction", [account_block.to_json()]
+        )
 
     async def get_unconfirmed_blocks_by_address(
         self, address: str, page_index=0, page_size=MEMORY_POOL_PAGE_SIZE
